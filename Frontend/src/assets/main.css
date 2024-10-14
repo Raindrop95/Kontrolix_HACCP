@@ -1,0 +1,44 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src:
+    local('Roboto'),
+    url('/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+    url('/fonts/Roboto/Roboto-Regular.woff') format('woff');
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
